@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Metric on AI研读论文</title>
+		<link>http://localhost:1313/tags/metric/</link>
+		<description>Recent content in Metric on AI研读论文</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 17 Jul 2026 14:30:20 +0800</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/metric/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>ENM</title>
+				<link>http://localhost:1313/papers/enm/</link>
+				<pubDate>Fri, 17 Jul 2026 14:30:20 +0800</pubDate>
+				<guid>http://localhost:1313/papers/enm/</guid>
+				<description>&lt;blockquote&gt;&#xA;&lt;p&gt;title: &amp;lsquo;Attention Is All You Need&amp;rsquo;&lt;/p&gt;&#xA;&lt;p&gt;authors: &amp;ldquo;Vaswani et al.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;year: 2017&lt;/p&gt;&#xA;&lt;p&gt;venue: &amp;ldquo;NeurIPS 2017&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;paper_url: &amp;ldquo;&lt;a href=&#34;https://arxiv.org/abs/1706.03762%22&#34;&gt;https://arxiv.org/abs/1706.03762&amp;quot;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;本文提出 Transformer 架构，完全基于自注意力机制，摒弃 RNN/CNN……&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

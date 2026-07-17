@@ -1,6 +1,6 @@
-baseURL = "__TEMPLATE_BASE_URL__"
+baseURL = "https://airp.kylinwolf.dpdns.org"
 languageCode = "zh-cn"
-title = "__TEMPLATE_SITE_TITLE__"
+title = "AI研读论文"
 # theme = "PaperMod"
 theme = "hugo-theme-m10c"
 
@@ -15,48 +15,25 @@ theme = "hugo-theme-m10c"
     enableKaTeX = true
     enableMermaid = true
 
-    author = "__TEMPLATE_AUTHOR_NAME__"
-    description = "__TEMPLATE_SITE_DESCRIPTION__"
+    author = "WOLF"
+    description = "WOLF AI研读论文"
     # 你可以放一个头像链接，如果不需要可以注释掉或删除
-    avatar = "__TEMPLATE_AVATAR_URL__"
+    avatar = "images/wolf.png"
 
 # ── 主菜单（顶栏导航）──
 [menu]
   [[menu.main]]
-    name = "__TEMPLATE_AUTHOR_NAME__"
+    name = "主页"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "__TEMPLATE_AUTHOR_NAME__"
-    url = "/region-quest/"
+    name = "论文"
+    url = "/papers"
     weight = 2
+  
   [[menu.main]]
-    name = "__TEMPLATE_AUTHOR_NAME__"
-    url = "/episode-quest/"
-    weight = 3
-  [[menu.main]]
-    name = "__TEMPLATE_AUTHOR_NAME__"
-    url = "/boss-raiders/"
-    weight = 4
-  [[menu.main]]
-    name = "__TEMPLATE_AUTHOR_NAME__"
-    url = "/tower-of-chaos/"
-    weight = 5
-  [[menu.main]]
-    name = "__TEMPLATE_AUTHOR_NAME__"
-    url = "/other-quest/"
-    weight = 6
-  [[menu.main]]
-    name = "__TEMPLATE_AUTHOR_NAME__"
-    url = "/character-skill/"
-    weight = 7
-  [[menu.main]]
-    name = "__TEMPLATE_AUTHOR_NAME__"
-    url = "/equipment/"
-    weight = 8
-  [[menu.main]]
-    name = "__TEMPLATE_AUTHOR_NAME__"
-    url = "/trickster-system/"
+    name = "联系我"
+    url = "/Contact"
     weight = 9
 
 

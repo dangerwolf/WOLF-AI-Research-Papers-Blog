@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>ENM on AI研读论文</title>
+		<link>http://localhost:1313/papers/enm/</link>
+		<description>Recent content in ENM on AI研读论文</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 17 Jul 2026 14:53:04 +0800</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/papers/enm/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Ai En</title>
+				<link>http://localhost:1313/papers/enm/ai-en/</link>
+				<pubDate>Fri, 17 Jul 2026 14:53:04 +0800</pubDate>
+				<guid>http://localhost:1313/papers/enm/ai-en/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ai Cn</title>
+				<link>http://localhost:1313/papers/enm/ai-cn/</link>
+				<pubDate>Fri, 17 Jul 2026 14:52:53 +0800</pubDate>
+				<guid>http://localhost:1313/papers/enm/ai-cn/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Experiment</title>
+				<link>http://localhost:1313/papers/enm/experiment/</link>
+				<pubDate>Fri, 17 Jul 2026 14:52:42 +0800</pubDate>
+				<guid>http://localhost:1313/papers/enm/experiment/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Overall</title>
+				<link>http://localhost:1313/papers/enm/overall/</link>
+				<pubDate>Fri, 17 Jul 2026 14:52:25 +0800</pubDate>
+				<guid>http://localhost:1313/papers/enm/overall/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>

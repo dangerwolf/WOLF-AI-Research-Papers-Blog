@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>__TEMPLATE_HOME_TITLE__ on AI研读论文</title>
+		<link>http://localhost:1313/papers/</link>
+		<description>Recent content in __TEMPLATE_HOME_TITLE__ on AI研读论文</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate></lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/papers/index.xml" rel="self" type="application/rss+xml" />
+	</channel>
+</rss>
