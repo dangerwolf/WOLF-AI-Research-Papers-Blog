@@ -1,0 +1,15 @@
+
+{{ $refID := .Get 0 }}
+{{ $references := site.Data.references }}
+
+{{ range $references }}
+  {{ if eq .id $refID }}
+    <span class="citation" id="cite-{{ .id }}">
+      <sup>
+        <a href="#ref-{{ .id }}" title="{{ .title }}">
+          [{{ .id }}]
+        </a>
+      </sup>
+    </span>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,53 @@
+
+{{ $references := site.Data.references }}
+
+<section class="bibliography">
+  <h2>参考文献</h2>
+  <ol class="references">
+    {{ range $references }}
+      <li id="ref-{{ .id }}">
+        <span class="authors">{{ .authors }}</span>.
+        {{ if eq .type "article" }}
+          <span class="title">{{ .title }}</span>.
+          <em>{{ .journal }}</em>, {{ .year }}, 
+          {{ if .volume }}<strong>{{ .volume }}</strong>{{ end }}
+          {{ if .pages }}:{{ .pages }}{{ end }}.
+          {{ if .doi }}<a href="https://doi.org/{{ .doi }}" target="_blank">DOI: {{ .doi }}</a>{{ end }}
+        {{ else if eq .type "book" }}
+          <em class="title">{{ .title }}</em>.
+          {{ .note }}, {{ .year }}.
+        {{ else if eq .type "inproceedings" }}
+          <span class="title">{{ .title }}</span>.
+          In <em>{{ .journal }}</em>, {{ .year }}, 
+          {{ if .volume }}vol. {{ .volume }}{{ end }}
+          {{ if .pages }}:{{ .pages }}{{ end }}.
+        {{ else if eq .type "misc" }}
+          <span class="title">{{ .title }}</span>.
+          {{ if .url }}<a href="{{ .url }}" target="_blank">{{ .url }}</a>{{ end }}
+          {{ if .note }}, {{ .note }}{{ end }}.
+        {{ end }}
+        <a href="#cite-{{ .id }}" class="backref">↑</a>
+      </li>
+    {{ end }}
+  </ol>
+</section>
+
+<style>
+  .bibliography {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+  }
+  .references li {
+    margin-bottom: 0.8em;
+    line-height: 1.6;
+  }
+  .citation sup a {
+    text-decoration: none;
+  }
+  .backref {
+    margin-left: 0.5em;
+    text-decoration: none;
+    color: #666;
+  }
+</style>

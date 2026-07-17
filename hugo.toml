@@ -1,0 +1,90 @@
+baseURL = "__TEMPLATE_BASE_URL__"
+languageCode = "zh-cn"
+title = "__TEMPLATE_SITE_TITLE__"
+# theme = "PaperMod"
+theme = "hugo-theme-m10c"
+
+
+
+[params]
+    ShowToc = true
+    TocOpen = true
+    ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    enableMathJax = true
+    enableKaTeX = true
+    enableMermaid = true
+
+    author = "__TEMPLATE_AUTHOR_NAME__"
+    description = "__TEMPLATE_SITE_DESCRIPTION__"
+    # 你可以放一个头像链接，如果不需要可以注释掉或删除
+    avatar = "__TEMPLATE_AVATAR_URL__"
+
+# ── 主菜单（顶栏导航）──
+[menu]
+  [[menu.main]]
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "/region-quest/"
+    weight = 2
+  [[menu.main]]
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "/episode-quest/"
+    weight = 3
+  [[menu.main]]
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "/boss-raiders/"
+    weight = 4
+  [[menu.main]]
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "/tower-of-chaos/"
+    weight = 5
+  [[menu.main]]
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "/other-quest/"
+    weight = 6
+  [[menu.main]]
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "/character-skill/"
+    weight = 7
+  [[menu.main]]
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "/equipment/"
+    weight = 8
+  [[menu.main]]
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "/trickster-system/"
+    weight = 9
+
+
+
+
+        
+[outputs]
+  home = ["HTML", "JSON"]  # 为搜索索引生成 JSON
+
+[permalinks]
+  posts = "/:contentbasename/"
+
+# --- 在文件末尾添加以下内容 ---
+
+[markup]
+# ── 侧边栏（可选：按分类列出子页面）──
+  [markup.tableOfStyles]
+    startLevel = 2
+    endLevel = 3
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      table = true # 确保表格扩展处于开启状态
+    [markup.goldmark.renderer]
+      # 设置为 true 来允许 Markdown 文件中的原始 HTML 标签
+      unsafe = true
+    [markup.goldmark.parser]
+      attribute = true  # 必须为 true
+    [markup.highlight]
+      style = "monokai"
+      linenos = true
+      lineNumbersInTable = true

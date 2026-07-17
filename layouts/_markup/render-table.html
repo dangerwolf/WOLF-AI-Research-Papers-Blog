@@ -1,0 +1,86 @@
+<style>
+  /* 适配 m10c 极简风的高级感透光表格 */
+  .custom-m10c-table-wrap {
+      margin: 2rem 0 !important;
+      width: 100% !important;
+      overflow-x: auto !important; /* 移动端自适应 */
+      border: 1px solid rgba(255, 255, 255, 0.15) !important; /* 淡淡的外边框 */
+      border-radius: 4px !important; /* 微圆角，迎合 m10c 风格 */
+      background-color: transparent !important; /* 抛弃沉闷的纯黑底色，完全透出主题背景 */
+  }
+
+  .custom-m10c-table-wrap table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      font-size: 0.9rem !important;
+      line-height: 1.6 !important;
+      color: #999999 !important; /* 默认文字使用温和的灰色 */
+      margin: 0 !important;
+  }
+
+  /* 表头：采用主题经典的浅白字，加粗，底部双线感 */
+  .custom-m10c-table-wrap th {
+      background-color: rgba(255, 255, 255, 0.05) !important; /* 微光表头 */
+      color: #ffffff !important; /* 纯白突出表头 */
+      font-weight: 600 !important;
+      padding: 12px 16px !important;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.25) !important; /* 略粗的表头分割线 */
+      border-right: 1px solid rgba(255, 255, 255, 0.1) !important; /* 表头列线 */
+  }
+
+  /* 单元格：彻底补全纵向列线与横向行线 */
+  .custom-m10c-table-wrap td {
+      padding: 14px 16px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important; /* 极淡的横向行线 */
+      border-right: 1px solid rgba(255, 255, 255, 0.08) !important;  /* 【关键修复】纵向列线 */
+      white-space: normal !important;
+  }
+
+  /* 移除最后一列多余的右边框 */
+  .custom-m10c-table-wrap th:last-child,
+  .custom-m10c-table-wrap td:last-child {
+      border-right: none !important;
+  }
+
+  /* 斑马纹：用极浅的半透明白，在暗色背景下呈现精致的高级灰度差 */
+  .custom-m10c-table-wrap tbody tr:nth-of-type(even) {
+      background-color: rgba(255, 255, 255, 0.02) !important;
+  }
+
+  /* 悬停交互：点亮单行文字 */
+  .custom-m10c-table-wrap tbody tr:hover {
+      background-color: rgba(255, 255, 255, 0.04) !important;
+  }
+  .custom-m10c-table-wrap tbody tr:hover td {
+      color: #ffffff !important; /* 鼠标指针悬停时文字点亮变白 */
+      transition: color 0.2s ease;
+  }
+</style>
+
+<div class="custom-m10c-table-wrap">
+  <table {{- range $k, $v := .Attributes }}{{- if $v }} {{- printf " %s=%q" $k $v | safeHTMLAttr }}{{- end }}{{- end }}>
+    {{- with .THead }}
+    <thead>
+      {{- range . }}
+      <tr>
+        {{- range . }}
+        <th {{- with .Alignment }} style="text-align: {{ . }};" {{- end }}>{{ .Text | safeHTML }}</th>
+        {{- end }}
+      </tr>
+      {{- end }}
+    </thead>
+    {{- end }}
+    
+    {{- with .TBody }}
+    <tbody>
+      {{- range . }}
+      <tr>
+        {{- range . }}
+        <td {{- with .Alignment }} style="text-align: {{ . }};" {{- end }}>{{ .Text | safeHTML }}</td>
+        {{- end }}
+      </tr>
+      {{- end }}
+    </tbody>
+    {{- end }}
+  </table>
+</div>

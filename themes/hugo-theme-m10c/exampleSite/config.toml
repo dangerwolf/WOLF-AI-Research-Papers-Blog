@@ -1,0 +1,65 @@
+baseURL = "__TEMPLATE_BASE_URL__"
+title = "__TEMPLATE_SITE_TITLE__"
+themesDir = "../.."
+theme = "hugo-theme-m10c"
+
+[pagination]
+  pagerSize = 8
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "/tags/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "/about/"
+    weight = 3
+
+[params]
+  author = "__TEMPLATE_AUTHOR_NAME__"
+  description = "__TEMPLATE_SITE_DESCRIPTION__"
+  menu_item_separator = " - "
+  [[params.social]]
+    icon = "brand-github"
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "https://github.com/gohugoio"
+  [[params.social]]
+    icon = "brand-x"
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "https://twitter.com/gohugoio"
+  [[params.social]]
+    icon = "brand-mastodon"
+    name = "__TEMPLATE_AUTHOR_NAME__"
+    url = "https://twitter.com/gohugoio"
+
+  # Default theme
+  # [params.style]
+  #   darkestColor = "#242930"
+  #   darkColor = "#353b43"
+  #   lightColor = "#afbac4"
+  #   lightestColor = "#ffffff"
+  #   primaryColor = "#57cc8a"
+
+  # Green theme
+  # [params.style]
+  #   darkestColor = "#315659"
+  #   darkColor = "#253031"
+  #   lightColor = "#96a879"
+  #   lightestColor = "#fff"
+  #   primaryColor = "#dad865"
+
+  # Red theme
+  # [params.style]
+  #   darkestColor = "#d35050"
+  #   darkColor = "#212121"
+  #   lightColor = "#d6d6d6"
+  #   lightestColor = "#d3d3d3"
+  #   primaryColor = "#ffffff"
