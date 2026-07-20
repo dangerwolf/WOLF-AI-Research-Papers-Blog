@@ -1,229 +1,276 @@
-# wolf-hugo-template-base
+# WOLF AI Research Papers Blog
 
-一个基于 Hugo 的博客/资料站模板仓库。  
-本模板保留了主题能力、目录架构和核心配置，已剥离历史内容（文章、分类、标签、图片等），用于快速创建新站点。
+一个基于 **Hugo** 构建的个人论文研读博客，当前主题集中在：
 
-> 来源说明：该模板从个人项目骨架中抽离而来，目标是“可复用、可扩展、可快速初始化”。
+- 软件工程（Software Engineering）
+- 电子表格（Spreadsheet）相关研究论文
 
----
-
-## 目录
-
-- [项目定位](#项目定位)
-- [功能特性](#功能特性)
-- [项目结构](#项目结构)
-- [快速开始](#快速开始)
-- [模板使用方式](#模板使用方式)
-- [初始化检查清单](#初始化检查清单)
-- [内容与主题开发](#内容与主题开发)
-- [部署建议](#部署建议)
-- [许可授权（重要）](#许可授权重要)
-- [商业授权](#商业授权)
-- [贡献说明](#贡献说明)
+站点用于沉淀论文阅读笔记、研究脉络与方法总结，并通过静态站点方式部署到 Cloudflare Pages。
 
 ---
 
-## 项目定位
+## 1. 项目目的
 
-这个仓库不是现成内容站，而是一个 **Hugo 模板基座**。  
-你可以基于它快速生成一个新的博客/Wiki站点，重点复用：
+本项目的核心目标：
 
-- 主题与视觉结构
-- Hugo 配置体系
-- 常用插件/扩展设定
-- 目录组织与工程化习惯
+1. **结构化记录论文研读过程**  
+   将论文背景、方法、实验、启发与个人观点统一到标准化文章模板中，便于持续积累。
 
----
+2. **形成可长期维护的研究博客**  
+   使用 Hugo 的内容与模板机制，做到写作、构建、发布分离，降低维护成本。
 
-## 功能特性
-
-- 保留 Hugo 项目骨架与主题能力
-- 保留可复用配置（菜单、参数、构建相关）
-- 清空历史业务内容，避免“旧文章遗留”
-- 使用统一占位符（`__TEMPLATE_*__`）进行个性化初始化
-- 适合通过 GitHub Template 一键创建新仓库
+3. **可复用的技术写作工作流**  
+   包括：新建文章模板、Markdown 写作规范、本地预览、构建产物生成、Cloudflare Pages 持续部署。
 
 ---
 
-## 项目结构
-
-> 以下为模板推荐结构示例（实际以仓库当前文件为准）：
+## 2. 项目结构（基于仓库实际目录）
 
 ```text
 .
-├── archetypes/                # Hugo 内容原型（new 命令模板）
-├── assets/                    # Hugo Pipe 资源（SCSS/TS/图片等）
-├── config/                    # 分环境或分模块配置（可选）
-│   └── _default/              # 默认配置集合（推荐）
-├── content/                   # 站点内容（模板中应为“空壳”）
-│   ├── _index.md
-│   ├── posts/
-│   ├── page/
-│   └── wiki/
-├── data/                      # 数据驱动配置（作者、链接等）
-├── layouts/                   # 自定义布局模板（覆盖主题）
-├── static/                    # 静态资源（favicon、固定文件）
-├── themes/                    # 主题（内置或子模块）
-├── .github/workflows/         # CI/CD（可选）
-├── TEMPLATE_SETUP.md          # 模板初始化说明
-├── LICENSE                    # 许可协议（非商业源码许可）
-├── COMMERCIAL_LICENSE.md      # 商业授权说明
-└── README.md
+├─ archetypes/         # Hugo 新文章模板（hugo new 时使用）
+├─ content/            # 文章正文（Markdown）
+├─ layouts/            # 自定义页面布局模板（覆盖/扩展主题）
+├─ static/             # 静态资源（原样复制到站点根目录）
+├─ themes/             # Hugo 主题（含子模块配置）
+├─ resources/          # Hugo 资源缓存/管线产物（本地生成）
+├─ public/             # Hugo 编译输出目录（最终静态站点文件）
+├─ hugo.toml           # Hugo 主配置文件
+├─ .gitmodules         # Git 子模块配置（通常用于主题）
+└─ .gitignore          # Git 忽略规则
 ```
+
+> 说明：`public/` 是构建结果目录，Cloudflare Pages 最终应部署这里的内容（或让 CF 在构建流程中自动生成）。
 
 ---
 
-## 快速开始
+## 3. 环境与相关设置
 
-### 1) 本地运行
+### 3.1 依赖要求
 
-先确保安装 Hugo（建议 extended 版本）：
+- Hugo（建议使用 **extended** 版本，便于 SCSS/资源管线能力）
+- Git（若主题使用子模块，需要支持 submodule）
+- 可选：Node.js（若你后续引入前端构建链）
+
+### 3.2 克隆仓库与子模块
+
+如果主题在 `themes/` 下通过子模块管理，首次拉取建议：
 
 ```bash
-hugo version
+git clone --recurse-submodules https://github.com/dangerwolf/WOLF-AI-Research-Papers-Blog.git
+cd WOLF-AI-Research-Papers-Blog
 ```
 
-启动开发服务器：
+若已 clone 但未初始化子模块：
+
+```bash
+git submodule update --init --recursive
+```
+
+### 3.3 Hugo 配置文件
+
+项目主配置为：
+
+- `hugo.toml`
+
+通常在这里维护：
+
+- `baseURL`
+- `languageCode`
+- `title`
+- 主题配置（theme）
+- 菜单、参数、分页、markup 渲染相关项
+
+---
+
+## 4. 撰写文章的细节（推荐工作流）
+
+### 4.1 内容组织建议
+
+建议在 `content/` 下按研究主题分类，例如：
+
+```text
+content/
+└─ software-engineering/
+   └─ spreadsheet/
+      ├─ paper-a.md
+      └─ paper-b.md
+```
+
+这样便于后续生成专题列表页与导航。
+
+### 4.2 Front Matter 建议字段
+
+每篇文章建议包含（可按你实际模板增减）：
+
+- `title`: 文章标题
+- `date`: 创建时间（ISO 格式）
+- `lastmod`: 最后更新时间
+- `draft`: 是否草稿
+- `tags`: 标签数组（如方法、任务类型）
+- `categories`: 分类数组
+- `summary`: 摘要（用于列表页）
+- `authors` / `paper` / `venue`（可选，自定义论文元信息）
+
+示例：
+
+```yaml
+---
+title: "论文标题：XXXX"
+date: 2026-07-20T10:00:00+08:00
+lastmod: 2026-07-20T10:00:00+08:00
+draft: true
+tags: ["software-engineering", "spreadsheet", "program-synthesis"]
+categories: ["paper-reading"]
+summary: "一句话总结论文核心贡献。"
+---
+```
+
+### 4.3 论文研读正文建议结构
+
+建议固定一个写作骨架，提高输出一致性：
+
+1. 研究问题（Problem）
+2. 背景与动机（Background / Motivation）
+3. 核心方法（Method）
+4. 实验与结果（Experiments）
+5. 局限性（Limitations）
+6. 我的理解与启发（Takeaways）
+7. 参考链接（论文、代码、数据集）
+
+---
+
+## 5. 如何新建文章
+
+在 Hugo 项目根目录执行：
+
+```bash
+hugo new content/software-engineering/spreadsheet/my-paper-note.md
+```
+
+或（旧写法也常见）：
+
+```bash
+hugo new software-engineering/spreadsheet/my-paper-note.md
+```
+
+生成后会自动套用 `archetypes/` 中对应模板（若存在）。
+
+然后编辑该 Markdown 文件，补全 Front Matter 并开始写作。
+
+---
+
+## 6. 本地预览与 Hugo 编译
+
+### 6.1 本地开发预览
 
 ```bash
 hugo server -D
 ```
 
-默认访问地址：
+说明：
 
-- `http://localhost:1313`
+- `-D` 会包含 `draft: true` 的草稿文章
+- 本地访问地址通常是 `http://localhost:1313`
 
-### 2) 构建发布文件
+### 6.2 生产构建
 
 ```bash
 hugo --minify
 ```
 
-生成目录通常为：
+构建结果输出到：
 
 - `public/`
 
----
-
-## 模板使用方式
-
-### 方式 A：GitHub 模板（推荐）
-
-1. 点击仓库页面上的 **Use this template**
-2. 创建你的新仓库
-3. 克隆到本地并进入目录
-4. 按 `TEMPLATE_SETUP.md` 替换所有占位符
-5. 本地运行确认无误后开始写作
-
-### 方式 B：手动复制骨架
-
-1. 克隆本仓库
-2. 删除原 git 历史并重新初始化（可选）
-3. 替换 `__TEMPLATE_*__` 字段
-4. 提交到你自己的新仓库
+如果要清理历史产物后再构建，可先删除 `public/` 再执行构建。
 
 ---
 
-## 初始化检查清单
+## 7. 部署到 Cloudflare Pages（技术细节）
 
-创建新站后，请全局搜索占位符：
+你可以采用 **Git 集成自动部署**（推荐）。
 
-```bash
-grep -R "__TEMPLATE_" -n .
-```
+### 7.1 在 Cloudflare Pages 创建项目
 
-至少替换以下字段：
+1. 登录 Cloudflare Dashboard
+2. 进入 **Pages** → **Create a project**
+3. 选择并连接 GitHub 仓库：`dangerwolf/WOLF-AI-Research-Papers-Blog`
 
-- `__TEMPLATE_BASE_URL__`：站点地址
-- `__TEMPLATE_SITE_TITLE__`：站点名称
-- `__TEMPLATE_SITE_DESCRIPTION__`：站点描述
-- `__TEMPLATE_AUTHOR_NAME__`：作者名
-- `__TEMPLATE_AUTHOR_EMAIL__`：作者邮箱
-- `__TEMPLATE_AVATAR_URL__`：头像链接
-- `__TEMPLATE_HOME_TITLE__`：首页标题
-- `__TEMPLATE_BUSINESS_EMAIL__`：商业授权联系邮箱
-- `__TEMPLATE_CONTACT__`：备用联系方式
-- `__TEMPLATE_RESPONSE_TIME__`：响应时间说明
+### 7.2 构建配置（Hugo 项目）
 
----
+在 Pages 构建设置中配置：
 
-## 内容与主题开发
+- **Framework preset**: Hugo（如可选）
+- **Build command**:  
+  `hugo --minify`
+- **Build output directory**:  
+  `public`
 
-### 新建文章
+### 7.3 环境变量（建议）
 
-```bash
-hugo new posts/my-first-post.md
-```
+可按需设置（示例）：
 
-### 常见内容目录建议
+- `HUGO_VERSION`：固定 Hugo 版本，避免云端与本地版本漂移
+- `HUGO_ENV=production`
+- `HUGO_ENABLEGITINFO=true`（如你模板中使用 Git 信息）
 
-- `content/posts/`：博客文章
-- `content/page/`：独立页面（关于、友链等）
-- `content/wiki/`：知识条目/文档型内容
+> 关键建议：固定 `HUGO_VERSION`，确保 Cloudflare 构建结果与本地一致。
 
-### 主题定制建议
+### 7.4 分支与发布策略
 
-- 优先在 `layouts/` 覆盖主题模板，避免直接改 `themes/`
-- 样式优先放在 `assets/`，通过 Hugo Pipe 处理
-- 保持 `config` 与 `data` 的职责边界（配置 vs 内容数据）
+- 生产分支：`main`
+- 每次 push 到 `main` 自动触发 Pages 构建与发布
+- 如需预览环境，可开启 PR Preview（Cloudflare 自动生成预览链接）
 
----
+### 7.5 自定义域名
 
-## 部署建议
+若你有自定义域名（如仓库 metadata 中的主页域名）：
 
-可部署到：
-
-- GitHub Pages
-- Netlify
-- Vercel
-- 自托管 Nginx/对象存储
-
-部署前建议：
-
-1. 确认 `baseURL` 已替换
-2. 本地 `hugo --minify` 成功
-3. 检查无 `__TEMPLATE_*__` 残留
-4. 检查 robots/sitemap/analytics/comment 等配置是否符合预期
+1. Pages 项目 → **Custom domains**
+2. 绑定域名
+3. 按提示添加/校验 DNS 记录
+4. 等待证书签发与生效（Cloudflare 自动托管 TLS）
 
 ---
 
-## 许可授权（重要）
+## 8. 常见问题排查
 
-本项目采用：
+1. **主题样式丢失**  
+   - 检查 `themes/` 是否完整（子模块是否初始化）
+   - 检查 `hugo.toml` 中 theme 配置是否正确
 
-- **Personal Non-Commercial Source License (PNSL) v1.0**（见 [LICENSE](./LICENSE)）
+2. **Cloudflare 构建失败（Hugo 版本不兼容）**  
+   - 在 Pages 环境变量中固定 `HUGO_VERSION`
+   - 保证本地与云端版本一致
 
-### 你可以做什么
+3. **文章没显示**  
+   - 是否仍是 `draft: true`
+   - 发布构建是否未使用 `-D`（生产环境通常不应包含草稿）
 
-- 个人学习、研究、非商业用途下免费使用与修改。
-
-### 你不可以做什么（未经书面授权）
-
-- 任何商业使用（包括直接商用、企业使用、客户交付、SaaS/托管、广告或付费变现）
-- 二次开发后商用（仍属于受限行为）
-- 删除或篡改版权与许可声明
-
-> 说明：本项目为“源码可见（source-available）”，并非 OSI 定义的开源许可。
-
----
-
-## 商业授权
-
-凡涉及商业目的，请先取得书面授权并完成付费许可。  
-请查看并按模板提交申请：
-
-- [COMMERCIAL_LICENSE.md](./COMMERCIAL_LICENSE.md)
-
-未获书面商业授权前，任何商业使用均不被许可。
+4. **静态资源 404**  
+   - 文件应放在 `static/` 下
+   - 引用路径应基于站点根路径检查
 
 ---
 
-## 贡献说明
+## 9. 维护建议
 
-欢迎提交 Issue / PR（Bug 修复、文档改进、模板优化）。  
-提交贡献即表示你有权提交该内容，且同意项目在许可框架内使用你的贡献。
+- 保持 `content/` 分类清晰，按研究方向分层目录
+- 统一论文笔记模板，保证长期可检索性
+- 定期升级 Hugo 与主题，但每次升级后先本地完整构建验证
+- 发布前本地执行一次 `hugo --minify` 做最终检查
 
-## 👤 作者
+---
+
+## 10. License
+
+项目许可信息见仓库中的：
+
+- `LICENSE`
+- `COMMERCIAL_LICENSE.md`
+
+## 11. 作者
 
 **dangerwolf**
 
