@@ -20,6 +20,12 @@ theme = "hugo-theme-m10c"
     # 你可以放一个头像链接，如果不需要可以注释掉或删除
     avatar = "images/wolf.png"
 
+    # 1. 注入 CSS：负责右侧悬浮定位与样式
+    customCSS = ["css/custom.css"]
+    customJS = ["js/custom.js"]
+
+  # 2. 注入 JS：因为 m10c 主题没有提供 customJS 数组参数，我们直接巧妙地把 JS 脚本塞进原本用来放统计代码的自定义参数中（例如 menu 或 layout 相关的注入，或者利用下面这个通用的 customCSS 技巧）
+
 # ── 主菜单（顶栏导航）──
 [menu]
   [[menu.main]]
@@ -53,6 +59,10 @@ theme = "hugo-theme-m10c"
   [markup.tableOfStyles]
     startLevel = 2
     endLevel = 3
+  [markup.tableOfContents]
+    endLevel = 3
+    startLevel = 2
+
   [markup.goldmark]
     [markup.goldmark.extensions]
       table = true # 确保表格扩展处于开启状态

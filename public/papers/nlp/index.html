@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>ENM // AI研读论文</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.162.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="WOLF" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    
+
+    
+    
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="ENM">
+	<meta name="twitter:description" content="[TOC]
+总体解构 / 实验细节解构 / AI中文讲解 / AI英文讲解
+ITEM METADATA title Attention Is All You Need date 2026-07-17 venue NeurIPS authors [“Ashish Vaswani”, “Noam Shazeer”, “Niki Parmar”, “Jakob Uszkoreit”] year 2017 pdf https://arxiv.org/abs/1706.03762 code https://github.com/tensorflow/tensor2tensor tags [“Transformer”, “NLP”, “Foundation Model”] 总体解构 Transformer 的核心贡献是用自注意力替代 RNN/CNN 的序列建模主干，显著提升并行效率，并在机器翻译上达到 SOTA。
+这篇论文要解决的关键矛盾是：长距离依赖建模能力 vs 训练并行效率。
+作者给出的答案是：通过 Multi-Head Self-Attention 在全局范围直接建立 token 间关系，并用位置编码补充顺序信息。">
+
+    <meta property="og:url" content="http://localhost:1313/papers/nlp/">
+	<meta property="og:site_name" content="AI研读论文">
+	<meta property="og:title" content="ENM">
+	<meta property="og:description" content="[TOC]
+总体解构 / 实验细节解构 / AI中文讲解 / AI英文讲解
+ITEM METADATA title Attention Is All You Need date 2026-07-17 venue NeurIPS authors [“Ashish Vaswani”, “Noam Shazeer”, “Niki Parmar”, “Jakob Uszkoreit”] year 2017 pdf https://arxiv.org/abs/1706.03762 code https://github.com/tensorflow/tensor2tensor tags [“Transformer”, “NLP”, “Foundation Model”] 总体解构 Transformer 的核心贡献是用自注意力替代 RNN/CNN 的序列建模主干，显著提升并行效率，并在机器翻译上达到 SOTA。
+这篇论文要解决的关键矛盾是：长距离依赖建模能力 vs 训练并行效率。
+作者给出的答案是：通过 Multi-Head Self-Attention 在全局范围直接建立 token 间关系，并用位置编码补充顺序信息。">
+	<meta property="og:locale" content="zh_cn">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="papers">
+		<meta property="article:published_time" content="2026-07-17T14:30:20+08:00">
+		<meta property="article:modified_time" content="2026-07-17T14:30:20+08:00">
+		<meta property="article:tag" content="Metric">
+		<meta property="article:tag" content="SpreadSheet">
+		<meta property="article:tag" content="Predict">
+		<meta property="article:tag" content="Fault">
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="/"><img class="app-header-avatar" src="/images/wolf.png" alt="WOLF" /></a>
+      <span class="app-header-title">AI研读论文</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">主页</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/papers">论文</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/contact">联系我</a>
+      </nav>
+      <p>WOLF AI研读论文</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">ENM</h1>
+      <div class="post-meta">
+        <div>
+          <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Jul 17, 2026
+        </div>
+        <div>
+          <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          1 min read
+        </div>
+        <div>
+          <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+              <a class="tag" href="/tags/metric/">Metric</a>
+              <a class="tag" href="/tags/spreadsheet/">SpreadSheet</a>
+              <a class="tag" href="/tags/predict/">Predict</a>
+              <a class="tag" href="/tags/fault/">Fault</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>[TOC]</p>
+<p><a href="#overview">总体解构</a> / <a href="#exp-details">实验细节解构</a> / <a href="#ai-zh">AI中文讲解</a> / <a href="#ai-en">AI英文讲解</a></p>
+<style>
+   
+  .custom-m10c-table-wrap {
+      margin: 2rem 0 !important;
+      width: 100% !important;
+      overflow-x: auto !important;  
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;  
+      border-radius: 4px !important;  
+      background-color: transparent !important;  
+  }
+
+  .custom-m10c-table-wrap table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      font-size: 0.9rem !important;
+      line-height: 1.6 !important;
+      color: #999999 !important;  
+      margin: 0 !important;
+  }
+
+   
+  .custom-m10c-table-wrap th {
+      background-color: rgba(255, 255, 255, 0.05) !important;  
+      color: #ffffff !important;  
+      font-weight: 600 !important;
+      padding: 12px 16px !important;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.25) !important;  
+      border-right: 1px solid rgba(255, 255, 255, 0.1) !important;  
+  }
+
+   
+  .custom-m10c-table-wrap td {
+      padding: 14px 16px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;  
+      border-right: 1px solid rgba(255, 255, 255, 0.08) !important;   
+      white-space: normal !important;
+  }
+
+   
+  .custom-m10c-table-wrap th:last-child,
+  .custom-m10c-table-wrap td:last-child {
+      border-right: none !important;
+  }
+
+   
+  .custom-m10c-table-wrap tbody tr:nth-of-type(even) {
+      background-color: rgba(255, 255, 255, 0.02) !important;
+  }
+
+   
+  .custom-m10c-table-wrap tbody tr:hover {
+      background-color: rgba(255, 255, 255, 0.04) !important;
+  }
+  .custom-m10c-table-wrap tbody tr:hover td {
+      color: #ffffff !important;  
+      transition: color 0.2s ease;
+  }
+</style>
+
+<div class="custom-m10c-table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>ITEM</th>
+        <th>METADATA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>title</td>
+        <td>Attention Is All You Need</td>
+      </tr>
+      <tr>
+        <td>date</td>
+        <td>2026-07-17</td>
+      </tr>
+      <tr>
+        <td>venue</td>
+        <td>NeurIPS</td>
+      </tr>
+      <tr>
+        <td>authors</td>
+        <td>[&ldquo;Ashish Vaswani&rdquo;, &ldquo;Noam Shazeer&rdquo;, &ldquo;Niki Parmar&rdquo;, &ldquo;Jakob Uszkoreit&rdquo;]</td>
+      </tr>
+      <tr>
+        <td>year</td>
+        <td>2017</td>
+      </tr>
+      <tr>
+        <td>pdf</td>
+        <td><a href="https://arxiv.org/abs/1706.03762">https://arxiv.org/abs/1706.03762</a></td>
+      </tr>
+      <tr>
+        <td>code</td>
+        <td><a href="https://github.com/tensorflow/tensor2tensor">https://github.com/tensorflow/tensor2tensor</a></td>
+      </tr>
+      <tr>
+        <td>tags</td>
+        <td>[&ldquo;Transformer&rdquo;, &ldquo;NLP&rdquo;, &ldquo;Foundation Model&rdquo;]</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2 id="overview">总体解构</h2>
+<p>Transformer 的核心贡献是用自注意力替代 RNN/CNN 的序列建模主干，显著提升并行效率，并在机器翻译上达到 SOTA。<br>
+这篇论文要解决的关键矛盾是：<strong>长距离依赖建模能力 vs 训练并行效率</strong>。<br>
+作者给出的答案是：通过 Multi-Head Self-Attention 在全局范围直接建立 token 间关系，并用位置编码补充顺序信息。</p>
+<hr>
+<h2 id="exp-details">实验细节解构</h2>
+<ol>
+<li>数据集：WMT 2014 English-German、English-French。</li>
+<li>对比基线：当时主流的 RNN/CNN 神经机器翻译模型。</li>
+<li>评价指标：BLEU。</li>
+<li>结果亮点：在更少训练成本下获得更高翻译质量。</li>
+<li>消融重点：多头注意力头数、模型维度、残差与层归一化组合等对性能影响显著。</li>
+<li>可复现关注点：学习率 warmup 策略、label smoothing、batch token 数设定。</li>
+</ol>
+<hr>
+<h2 id="ai-zh">AI中文讲解</h2>
+<p>你可以把 Transformer 理解为一个“全班同学同时互相看笔记”的机制。<br>
+RNN 像是按座位一个个传纸条，信息传远了容易丢；<br>
+Self-Attention 是每个词都能直接看所有词的“相关性分数”，<br>
+所以既能抓全局依赖，又适合 GPU 并行。</p>
+<hr>
+<h2 id="ai-en">AI英文讲解</h2>
+<p>The Transformer replaces recurrence with self-attention, enabling fully parallel training across tokens.<br>
+Its key idea is that each token dynamically weighs all other tokens, producing context-aware representations.<br>
+Multi-head attention allows the model to capture different relation patterns simultaneously, while positional encodings preserve order information.</p>
+<script> document.addEventListener('DOMContentLoaded', function() {     const content = document.querySelector('.post-content');     if (!content) return;     const headings = content.querySelectorAll('h2, h3');     if (headings.length === 0) return;      
+                                                                   const toc = document.createElement('aside');     toc.id = 'dynamic-toc';     toc.innerHTML = '<div class="toc-title">目录</div><ul></ul>';     const ul = toc.querySelector('ul');      headings.forEach((heading, index) => {         if (!heading.id) heading.id = 'toc-head-' + index;         const li = document.createElement('li');         const a = document.createElement('a');         a.href = '#' + heading.id;         a.textContent = heading.textContent;         li.appendChild(a);         ul.appendChild(li);     });     document.body.appendChild(toc);      
+                                                                   const style = document.createElement('style');     style.textContent = `         #dynamic-toc { position: fixed; top: 50px; right: 30px; width: 240px; max-height: 70vh; overflow-y: auto; padding: 15px; background: rgba(45, 55, 72, 0.95); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); font-size: 0.9rem; z-index: 100; font-family: sans-serif; }         #dynamic-toc .toc-title { font-weight: bold; margin-bottom: 10px; color: #00bcd4; border-bottom: 1px solid #4a5568; padding-bottom: 5px; }         #dynamic-toc ul { list-style: none; padding-left: 0; margin: 0; }         #dynamic-toc li { margin: 6px 0; }         #dynamic-toc a { color: #a0aec0; text-decoration: none; display: block; transition: color 0.2s; line-height: 1.4; }         #dynamic-toc a:hover { color: #fff; }         @media screen and (max-width: 1200px) { #dynamic-toc { display: none; } }     `;     document.head.appendChild(style); }); </script>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

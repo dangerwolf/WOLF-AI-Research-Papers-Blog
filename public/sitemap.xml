@@ -3,28 +3,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/papers/enm/ai-en/</loc>
-    <lastmod>2026-07-17T14:53:04+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/papers/enm/ai-cn/</loc>
-    <lastmod>2026-07-17T14:52:53+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/papers/enm/experiment/</loc>
-    <lastmod>2026-07-17T14:52:42+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/papers/enm/overall/</loc>
-    <lastmod>2026-07-17T14:52:25+08:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-07-17T14:30:20+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2026-07-17T14:30:20+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/papers/enm/</loc>
+    <loc>http://localhost:1313/papers/nlp/</loc>
     <lastmod>2026-07-17T14:30:20+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/fault/</loc>
     <lastmod>2026-07-17T14:30:20+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/metric/</loc>
+    <lastmod>2026-07-17T14:30:20+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/papers/</loc>
     <lastmod>2026-07-17T14:30:20+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/predict/</loc>
@@ -38,11 +32,5 @@
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-07-17T14:30:20+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-01-01T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/papers/</loc>
-    <lastmod>2026-01-01T00:00:00+08:00</lastmod>
   </url>
 </urlset>
