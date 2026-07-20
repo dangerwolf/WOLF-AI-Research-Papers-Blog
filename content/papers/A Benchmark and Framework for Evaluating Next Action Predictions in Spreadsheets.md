@@ -2,8 +2,8 @@
 date = '2026-07-17T14:30:20+08:00'
 draft = 'false'
 title = 'A Benchmark and Framework for Evaluating Next Action Predictions in Spreadsheets'
-tags=['SpreadSheet', 'Benchmark', 'Prediction']
-categories = ['SpreadSheet']
+tags=['Spreadsheet', 'Benchmark', 'Prediction']
+categories = ['Spreadsheet']
 
 +++
 
