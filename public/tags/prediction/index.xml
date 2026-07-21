@@ -1,24 +1,73 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Prediction on AI研读论文</title>
-		<link>http://localhost:1313/tags/prediction/</link>
-		<description>Recent content in Prediction on AI研读论文</description>
-		<generator>Hugo</generator>
-		<language>zh-cn</language>
-		
-		
-		
-		
-			<lastBuildDate>Fri, 17 Jul 2026 14:30:20 +0800</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/prediction/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>A Benchmark and Framework for Evaluating Next Action Predictions in Spreadsheets</title>
-				<link>http://localhost:1313/papers/a-benchmark-and-framework-for-evaluating-next-action-predictions-in-spreadsheets/</link>
-				<pubDate>Fri, 17 Jul 2026 14:30:20 +0800</pubDate>
-				<guid>http://localhost:1313/papers/a-benchmark-and-framework-for-evaluating-next-action-predictions-in-spreadsheets/</guid>
-				<description>&lt;p&gt;[TOC]&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;#overview&#34;&gt;总体解构&lt;/a&gt; / &lt;a href=&#34;#exp-details&#34;&gt;实验细节解构&lt;/a&gt; / &lt;a href=&#34;#ai-zh&#34;&gt;AI中文讲解&lt;/a&gt; / &lt;a href=&#34;#ai-en&#34;&gt;AI英文讲解&lt;/a&gt;&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;ITEM&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;METADATA&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;title&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;A Benchmark and Framework for Evaluating Next Action Predictions in  Spreadsheets&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;date&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;2026-07-17&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;venue&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;ICML 2026&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;authors&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;[&amp;ldquo;Tejas Agrawal&amp;rdquo;, &amp;ldquo;Vu Le&amp;rdquo;,  &amp;ldquo;Sumit Gulwani&amp;rdquo;, &amp;ldquo;Gust Verbruggen&amp;rdquo;]&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;year&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;2026&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;pdf&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://arxiv.org/abs/2606.13802&#34;&gt;https://arxiv.org/abs/2606.13802&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;code&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://www.github.com/Tej-55/NAPE&#34;&gt;www.github.com/Tej-55/NAPE&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;tags&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;[]&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;针对电子表格缺乏自动补全功能的痛点，本文提出了首个电子表格动作预测基准及交互式评估框架，通过构建数据集和多种模型对比，探讨了实现智能化电子表格交互的可行性与影响因素。&lt;/p&gt;&#xA;&lt;h1 id=&#34;overview&#34;&gt;总体解构&lt;/h1&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-核心痛点&#34;&gt;1. 【核心痛点】&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;一句话定义&lt;/strong&gt;：这篇论文试图解决&lt;strong&gt;如何在没有真实历史修改记录、且操作空间极其复杂的多维电子表格中，评测和构建“无模态”（Modeless）的下一步操作主动预测系统&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;前人困境&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;数据缺失&lt;/strong&gt;：公开的电子表格数据集（如 Enron）只有静态的最终版，完全没有记录用户一步步搭建表格的“动态轨迹（Edit Histories）”。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;评测失真（思路错误）&lt;/strong&gt;：传统评测多采用&lt;strong&gt;教师逼近式离线评估（Teacher-forced Offline Evaluation）&lt;/strong&gt;，将每一步隔离开进行静态匹配。这种做法无法模拟真实人机交互中“接受预测会导致后续操作发生改变”、“错误预测需要用户撤销/修正从而产生额外开销”的动态累积效应。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;2-解题机制&#34;&gt;2. 【解题机制】&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;核心直觉&lt;/strong&gt;：&lt;strong&gt;“他把‘评测代码自动补全’看作了‘动态强化学习的 On-policy Rollout 模拟游戏’”&lt;/strong&gt;。系统不只看预测得对不对，而是直接扮演用户，动态演进未来 ground truth 的轨迹。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;关键步骤（神来之笔）&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;动态轨迹重塑（Dynamic Ground-truth Adaptation）&lt;/strong&gt;：当模拟用户接受了一个包含部分错误（False Positive）的预测时，评估框架不会宕机，而是&lt;strong&gt;动态修改剩余的 ground-truth 动作序列（Future）&lt;/strong&gt;——它会自动在未来的头部插入“撤销操作（Inverse Operations）”来抹平模型的错误，并计算模型真正帮用户省去了多少次手动点击（User Actions Saved, UAS）。&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Prediction on AI研读论文</title><link>https://airp.kylinwolf.dpdns.org/tags/prediction/</link><description>Recent content in Prediction on AI研读论文</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 17 Jul 2026 14:30:20 +0800</lastBuildDate><atom:link href="https://airp.kylinwolf.dpdns.org/tags/prediction/index.xml" rel="self" type="application/rss+xml"/><item><title>A Benchmark and Framework for Evaluating Next Action Predictions in Spreadsheets</title><link>https://airp.kylinwolf.dpdns.org/papers/a-benchmark-and-framework-for-evaluating-next-action-predictions-in-spreadsheets/</link><pubDate>Fri, 17 Jul 2026 14:30:20 +0800</pubDate><guid>https://airp.kylinwolf.dpdns.org/papers/a-benchmark-and-framework-for-evaluating-next-action-predictions-in-spreadsheets/</guid><description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;&lt;a href="#overview"&gt;总体解构&lt;/a&gt; / &lt;a href="#exp-details"&gt;实验细节解构&lt;/a&gt; / &lt;a href="#ai-zh"&gt;AI中文讲解&lt;/a&gt; / &lt;a href="#ai-en"&gt;AI英文讲解&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ITEM&lt;/th&gt;
+					&lt;th&gt;METADATA&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;title&lt;/td&gt;
+					&lt;td&gt;A Benchmark and Framework for Evaluating Next Action Predictions in Spreadsheets&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;date&lt;/td&gt;
+					&lt;td&gt;2026-07-17&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;venue&lt;/td&gt;
+					&lt;td&gt;ICML 2026&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;authors&lt;/td&gt;
+					&lt;td&gt;[&amp;ldquo;Tejas Agrawal&amp;rdquo;, &amp;ldquo;Vu Le&amp;rdquo;, &amp;ldquo;Sumit Gulwani&amp;rdquo;, &amp;ldquo;Gust Verbruggen&amp;rdquo;]&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;year&lt;/td&gt;
+					&lt;td&gt;2026&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;pdf&lt;/td&gt;
+					&lt;td&gt;&lt;a href="https://arxiv.org/abs/2606.13802"&gt;https://arxiv.org/abs/2606.13802&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;code&lt;/td&gt;
+					&lt;td&gt;&lt;a href="https://www.github.com/Tej-55/NAPE"&gt;www.github.com/Tej-55/NAPE&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;tags&lt;/td&gt;
+					&lt;td&gt;[]&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;针对电子表格缺乏自动补全功能的痛点，本文提出了首个电子表格动作预测基准及交互式评估框架，通过构建数据集和多种模型对比，探讨了实现智能化电子表格交互的可行性与影响因素。&lt;/p&gt;
+&lt;h1 id="overview"&gt;总体解构&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id="1-核心痛点"&gt;1. 【核心痛点】&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;一句话定义&lt;/strong&gt;：这篇论文试图解决&lt;strong&gt;如何在没有真实历史修改记录、且操作空间极其复杂的多维电子表格中，评测和构建“无模态”（Modeless）的下一步操作主动预测系统&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;前人困境&lt;/strong&gt;：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据缺失&lt;/strong&gt;：公开的电子表格数据集（如 Enron）只有静态的最终版，完全没有记录用户一步步搭建表格的“动态轨迹（Edit Histories）”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;评测失真（思路错误）&lt;/strong&gt;：传统评测多采用&lt;strong&gt;教师逼近式离线评估（Teacher-forced Offline Evaluation）&lt;/strong&gt;，将每一步隔离开进行静态匹配。这种做法无法模拟真实人机交互中“接受预测会导致后续操作发生改变”、“错误预测需要用户撤销/修正从而产生额外开销”的动态累积效应。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="2-解题机制"&gt;2. 【解题机制】&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;核心直觉&lt;/strong&gt;：&lt;strong&gt;“他把‘评测代码自动补全’看作了‘动态强化学习的 On-policy Rollout 模拟游戏’”&lt;/strong&gt;。系统不只看预测得对不对，而是直接扮演用户，动态演进未来 ground truth 的轨迹。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;关键步骤（神来之笔）&lt;/strong&gt;：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;动态轨迹重塑（Dynamic Ground-truth Adaptation）&lt;/strong&gt;：当模拟用户接受了一个包含部分错误（False Positive）的预测时，评估框架不会宕机，而是&lt;strong&gt;动态修改剩余的 ground-truth 动作序列（Future）&lt;/strong&gt;——它会自动在未来的头部插入“撤销操作（Inverse Operations）”来抹平模型的错误，并计算模型真正帮用户省去了多少次手动点击（User Actions Saved, UAS）。&lt;/p&gt;</description></item></channel></rss>

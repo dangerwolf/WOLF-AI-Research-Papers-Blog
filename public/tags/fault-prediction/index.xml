@@ -1,24 +1,109 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Fault Prediction on AI研读论文</title>
-		<link>http://localhost:1313/tags/fault-prediction/</link>
-		<description>Recent content in Fault Prediction on AI研读论文</description>
-		<generator>Hugo</generator>
-		<language>zh-cn</language>
-		
-		
-		
-		
-			<lastBuildDate>Mon, 20 Jul 2026 15:51:16 +0800</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/fault-prediction/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Enhanced neighborhood metric for spreadsheet fault prediction</title>
-				<link>http://localhost:1313/papers/enhanced-neighborhood-metric-for-spreadsheet-fault-prediction/</link>
-				<pubDate>Mon, 20 Jul 2026 15:51:16 +0800</pubDate>
-				<guid>http://localhost:1313/papers/enhanced-neighborhood-metric-for-spreadsheet-fault-prediction/</guid>
-				<description>&lt;p&gt;[TOC]&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;#overview&#34;&gt;总体解构&lt;/a&gt; / &lt;a href=&#34;#exp-details&#34;&gt;实验细节解构&lt;/a&gt; / &lt;a href=&#34;#ai-zh&#34;&gt;AI中文讲解&lt;/a&gt;&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;ITEM&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;METADATA&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;title&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Enhanced neighborhood metric for spreadsheet fault prediction&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;date&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;2026-07-14&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;venue&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;AUSE&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;authors&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;[&amp;ldquo;Haitao Sun&amp;rdquo;, &amp;ldquo;Ying Wang&amp;rdquo;,  &amp;ldquo;Hai Yu&amp;rdquo;, &amp;ldquo;Zhiliang Zhu&amp;rdquo;]&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;year&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;2026&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;pdf&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1007/s10515-025-00552-2&#34;&gt;https://doi.org/10.1007/s10515-025-00552-2&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;code&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://enm.5104m.dpdns.org/&#34;&gt;https://enm.5104m.dpdns.org/&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;tags&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;[&amp;lsquo;Spreadsheet formulas&amp;rsquo;, &amp;lsquo;Fault prediction&amp;rsquo;, &amp;lsquo;Machine learning&amp;rsquo;, &amp;lsquo;Software metrics&amp;rsquo;]&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;这篇论文试图解决利用机器学习进行电子表格故障预测时，传统的&lt;strong&gt;单元格级指标无法有效捕捉空间上下文逻辑变化&lt;/strong&gt;而导致漏报和误报的难题。&lt;/p&gt;&#xA;&lt;h1 id=&#34;overview&#34;&gt;总体解构&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;【核心痛点】&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;一句话定义&lt;/strong&gt;：这篇论文试图解决利用机器学习进行电子表格故障预测时，传统的&lt;strong&gt;单元格级指标无法有效捕捉空间上下文逻辑变化&lt;/strong&gt;而导致漏报和误报的难题。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;前人困境&lt;/strong&gt;：在它之前，前人主要依赖公式长度、嵌套深度、引用数等静态复杂度指标，&lt;strong&gt;缺乏上下文感知能力&lt;/strong&gt;。当公式通过拖拽填充出现微小的语义偏差、或在高度模板化的网格中出现局部孤立异常（Outlier）时，传统方法因无法感知目标细胞与周围细胞的行列依赖关系而无法检测。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;【解题机制】&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;核心直觉&lt;/strong&gt;：作者将电子表格的故障检测抽象为“空间邻域内的局部不一致性检测”，即“把正常公式块看作连续的同质空间，把故障公式看作该空间中的几何异类”。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;关键步骤&lt;/strong&gt;：&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;十字邻域构建（Cross-Shaped Neighborhood）&lt;/strong&gt;：以目标细胞为中心，基于行列逻辑一致性，抽取上下左右半径为 $n$ 的非空细胞集合，而非采用传统的曼哈顿或对角线距离。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;R1C1 语义异质性量化（NH_DISS 等指标）&lt;/strong&gt;：将公式转换为消除位置绝对偏差的 R1C1 表达风格，利用反距离权重（Inverse-Distance Weighting）和序列匹配算法，计算目标细胞与邻域内主流公式的文本不确定性与不相似度。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;【创新增量】&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;对比&lt;/strong&gt;：相比于 Koch 等人（2019）提出的 64 个静态指标（SOTA 基线），本文引入了 8 个全新的&lt;strong&gt;增强邻域指标（ENM）&lt;/strong&gt;。在 EUSES 和 INFO1 等具有高密度依赖的结构化数据集上，将深度神经网络（DNN）等分类器的 F1-Score 实现了显著提升（EUSES 上的 DNN 提升高达 42%）。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;本质&lt;/strong&gt;：为电子表格分析领域补充了“表格局域性（Tabular Locality）的空间关联特征量化模型”这一块新拼图。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol start=&#34;4&#34;&gt;&#xA;&lt;li&gt;【批判性边界】&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;隐形假设&lt;/strong&gt;：算法的有效性严格建立在“表格具备结构同质性”的假设之上。即大多数公式细胞处于相互连接且逻辑一致的上下文中，错误仅作为少数派的局部突变出现。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;未解之谜&lt;/strong&gt;：&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;对有机散装表格失效&lt;/strong&gt;：在结构极度自由、无明显行列规律的野生商业表格（如 Enron 数据集）中，ENM 指标未能带来统计学上的显著提升。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;对整行/整列错误免疫&lt;/strong&gt;：如果用户通过自动填充（Auto-fill）错误地复制了整列公式，邻域内将实现“错误的同质化”，此时该方法会将其误判为正常。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol start=&#34;5&#34;&gt;&#xA;&lt;li&gt;【一言以蔽之】&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;图示&lt;/strong&gt;：&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-Plaintext&#34; data-lang=&#34;Plaintext&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      [ C_{i-1, j} ]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;             │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[ C_{i, j-1} ] ───► ( C_{i, j} ) ◄─── [ C_{i, j+1} ]  ===&amp;gt; 💡 NH_DISS (计算逻辑偏差)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;             │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      [ C_{i+1, j} ]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;公式&lt;/strong&gt;：&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fault Prediction on AI研读论文</title><link>https://airp.kylinwolf.dpdns.org/tags/fault-prediction/</link><description>Recent content in Fault Prediction on AI研读论文</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 20 Jul 2026 15:51:16 +0800</lastBuildDate><atom:link href="https://airp.kylinwolf.dpdns.org/tags/fault-prediction/index.xml" rel="self" type="application/rss+xml"/><item><title>Enhanced neighborhood metric for spreadsheet fault prediction</title><link>https://airp.kylinwolf.dpdns.org/papers/enhanced-neighborhood-metric-for-spreadsheet-fault-prediction/</link><pubDate>Mon, 20 Jul 2026 15:51:16 +0800</pubDate><guid>https://airp.kylinwolf.dpdns.org/papers/enhanced-neighborhood-metric-for-spreadsheet-fault-prediction/</guid><description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;&lt;a href="#overview"&gt;总体解构&lt;/a&gt; / &lt;a href="#exp-details"&gt;实验细节解构&lt;/a&gt; / &lt;a href="#ai-zh"&gt;AI中文讲解&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ITEM&lt;/th&gt;
+					&lt;th&gt;METADATA&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;title&lt;/td&gt;
+					&lt;td&gt;Enhanced neighborhood metric for spreadsheet fault prediction&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;date&lt;/td&gt;
+					&lt;td&gt;2026-07-14&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;venue&lt;/td&gt;
+					&lt;td&gt;AUSE&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;authors&lt;/td&gt;
+					&lt;td&gt;[&amp;ldquo;Haitao Sun&amp;rdquo;, &amp;ldquo;Ying Wang&amp;rdquo;, &amp;ldquo;Hai Yu&amp;rdquo;, &amp;ldquo;Zhiliang Zhu&amp;rdquo;]&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;year&lt;/td&gt;
+					&lt;td&gt;2026&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;pdf&lt;/td&gt;
+					&lt;td&gt;&lt;a href="https://doi.org/10.1007/s10515-025-00552-2"&gt;https://doi.org/10.1007/s10515-025-00552-2&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;code&lt;/td&gt;
+					&lt;td&gt;&lt;a href="https://enm.5104m.dpdns.org/"&gt;https://enm.5104m.dpdns.org/&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;tags&lt;/td&gt;
+					&lt;td&gt;[&amp;lsquo;Spreadsheet formulas&amp;rsquo;, &amp;lsquo;Fault prediction&amp;rsquo;, &amp;lsquo;Machine learning&amp;rsquo;, &amp;lsquo;Software metrics&amp;rsquo;]&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;这篇论文试图解决利用机器学习进行电子表格故障预测时，传统的&lt;strong&gt;单元格级指标无法有效捕捉空间上下文逻辑变化&lt;/strong&gt;而导致漏报和误报的难题。&lt;/p&gt;
+&lt;h1 id="overview"&gt;总体解构&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;【核心痛点】&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;一句话定义&lt;/strong&gt;：这篇论文试图解决利用机器学习进行电子表格故障预测时，传统的&lt;strong&gt;单元格级指标无法有效捕捉空间上下文逻辑变化&lt;/strong&gt;而导致漏报和误报的难题。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;前人困境&lt;/strong&gt;：在它之前，前人主要依赖公式长度、嵌套深度、引用数等静态复杂度指标，&lt;strong&gt;缺乏上下文感知能力&lt;/strong&gt;。当公式通过拖拽填充出现微小的语义偏差、或在高度模板化的网格中出现局部孤立异常（Outlier）时，传统方法因无法感知目标细胞与周围细胞的行列依赖关系而无法检测。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;【解题机制】&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;核心直觉&lt;/strong&gt;：作者将电子表格的故障检测抽象为“空间邻域内的局部不一致性检测”，即“把正常公式块看作连续的同质空间，把故障公式看作该空间中的几何异类”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关键步骤&lt;/strong&gt;：
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;十字邻域构建（Cross-Shaped Neighborhood）&lt;/strong&gt;：以目标细胞为中心，基于行列逻辑一致性，抽取上下左右半径为 $n$ 的非空细胞集合，而非采用传统的曼哈顿或对角线距离。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;R1C1 语义异质性量化（NH_DISS 等指标）&lt;/strong&gt;：将公式转换为消除位置绝对偏差的 R1C1 表达风格，利用反距离权重（Inverse-Distance Weighting）和序列匹配算法，计算目标细胞与邻域内主流公式的文本不确定性与不相似度。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start="3"&gt;
+&lt;li&gt;【创新增量】&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;对比&lt;/strong&gt;：相比于 Koch 等人（2019）提出的 64 个静态指标（SOTA 基线），本文引入了 8 个全新的&lt;strong&gt;增强邻域指标（ENM）&lt;/strong&gt;。在 EUSES 和 INFO1 等具有高密度依赖的结构化数据集上，将深度神经网络（DNN）等分类器的 F1-Score 实现了显著提升（EUSES 上的 DNN 提升高达 42%）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本质&lt;/strong&gt;：为电子表格分析领域补充了“表格局域性（Tabular Locality）的空间关联特征量化模型”这一块新拼图。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start="4"&gt;
+&lt;li&gt;【批判性边界】&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;隐形假设&lt;/strong&gt;：算法的有效性严格建立在“表格具备结构同质性”的假设之上。即大多数公式细胞处于相互连接且逻辑一致的上下文中，错误仅作为少数派的局部突变出现。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;未解之谜&lt;/strong&gt;：
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;对有机散装表格失效&lt;/strong&gt;：在结构极度自由、无明显行列规律的野生商业表格（如 Enron 数据集）中，ENM 指标未能带来统计学上的显著提升。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对整行/整列错误免疫&lt;/strong&gt;：如果用户通过自动填充（Auto-fill）错误地复制了整列公式，邻域内将实现“错误的同质化”，此时该方法会将其误判为正常。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start="5"&gt;
+&lt;li&gt;【一言以蔽之】&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;图示&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;3
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;4
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-Plaintext" data-lang="Plaintext"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; [ C_{i-1, j} ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;[ C_{i, j-1} ] ───► ( C_{i, j} ) ◄─── [ C_{i, j+1} ] ===&amp;gt; 💡 NH_DISS (计算逻辑偏差)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; [ C_{i+1, j} ]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;公式&lt;/strong&gt;：&lt;/p&gt;</description></item></channel></rss>
